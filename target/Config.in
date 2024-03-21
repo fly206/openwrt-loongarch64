@@ -188,6 +188,10 @@ config riscv64
 	select ARCH_64BIT
 	bool
 
+config loongarch64
+	select ARCH_64BIT
+	bool
+
 config sh3
 	bool
 
@@ -228,6 +232,7 @@ config ARCH
 	default "powerpc"   if powerpc
 	default "powerpc64" if powerpc64
 	default "riscv64"   if riscv64
+	default "loongarch64"   if loongarch64
 	default "sh3"       if sh3
 	default "sh3eb"     if sh3eb
 	default "sh4"       if sh4

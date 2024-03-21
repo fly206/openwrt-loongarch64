@@ -96,6 +96,8 @@ else ifneq (,$(findstring $(ARCH) , sh2 sh3 sh4 ))
   LINUX_KARCH := sh
 else ifneq (,$(findstring $(ARCH) , i386 x86_64 ))
   LINUX_KARCH := x86
+else ifneq (,$(findstring $(ARCH) , loongarch64 loongson64))
+  LINUX_KARCH := loongarch
 else
   LINUX_KARCH := $(ARCH)
 endif
